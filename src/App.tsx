@@ -17,9 +17,9 @@ class Person extends Record(defaultPersonProps) implements PersonProps {
   public readonly firstName!: string
   public readonly lastName!: string
 
-  // public constructor(values?: Partial<PersonProps>) {
-  //   values ? super(values) : super()
-  // }
+  public constructor(values?: Partial<PersonProps>) {
+    values ? super(values) : super()
+  }
 
   get fullName() {
     return `${this.firstName} ${this.lastName}`.trim()
